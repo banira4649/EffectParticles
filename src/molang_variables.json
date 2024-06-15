@@ -8,21 +8,21 @@
           "name": ".r",
           "value": {
             "type": "float",
-            "value": 0
+            "value": null
           }
         },
         {
           "name": ".g",
           "value": {
             "type": "float",
-            "value": 0
+            "value": null
           }
         },
         {
           "name": ".b",
           "value": {
             "type": "float",
-            "value": 0
+            "value": null
           }
         },
         {
