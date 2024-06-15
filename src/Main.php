@@ -26,14 +26,14 @@ class Main extends PluginBase{
             function(){
                 foreach(Server::getInstance()->getOnlinePlayers() as $player){
                     foreach($player->getEffects()->all() as $effect){
-                        $this->sendParticle($player->getPosition(), $effect->getColor());
+                        $this->sendEffectParticle($player->getPosition(), $effect->getColor());
                     }
                 }
             }
         ), 10);
     }
 
-    private function sendParticle(Position $position, Color $color): void{
+    private function sendEffectParticle(Position $position, Color $color): void{
         $packet = new SpawnParticleEffectPacket();
         $packet->position = $position->add(0, mt_rand(0, mt_getrandmax() - 1) / mt_getrandmax(), 0);
         $packet->particleName = "minecraft:mobspell_emitter";
@@ -42,6 +42,6 @@ class Main extends PluginBase{
         $json[0]->value->value[1]->value->value = $color->getG() / 255;
         $json[0]->value->value[2]->value->value = $color->getB() / 255;
         $packet->molangVariablesJson = json_encode($json);
-        NetworkBroadcastUtils::broadcastPackets(Server::getInstance()->getOnlinePlayers(), [$packet]);
+        NetworkBroadcastUtils::broadcastPackets($position->getWorld()->getPlayers(), [$packet]);
     }
 }
