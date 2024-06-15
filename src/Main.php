@@ -18,7 +18,7 @@ class Main extends PluginBase{
 
     public function onEnable(): void{
         $this->molangVariablesJson = mb_convert_encoding(
-            file_get_contents(__DIR__ . "\\molangVariables.json"),
+            file_get_contents(__DIR__ . "\\molang_variables.json"),
             'UTF8',
             'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN'
         );
