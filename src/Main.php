@@ -22,7 +22,6 @@ class Main extends PluginBase{
             'UTF8',
             'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN'
         );
-        var_dump(json_decode($this->molangVariablesJson));
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
             function(){
                 foreach(Server::getInstance()->getOnlinePlayers() as $player){
