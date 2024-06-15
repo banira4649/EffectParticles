@@ -1,0 +1,38 @@
+[
+  {
+    "name": "variable.color",
+    "value": {
+      "type": "member_array",
+      "value": [
+        {
+          "name": ".r",
+          "value": {
+            "type": "float",
+            "value": 0
+          }
+        },
+        {
+          "name": ".g",
+          "value": {
+            "type": "float",
+            "value": 0
+          }
+        },
+        {
+          "name": ".b",
+          "value": {
+            "type": "float",
+            "value": 0
+          }
+        },
+        {
+          "name": ".a",
+          "value": {
+            "type": "float",
+            "value": 1
+          }
+        }
+      ]
+    }
+  }
+]

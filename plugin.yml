@@ -1,0 +1,7 @@
+---
+name: EffectParticles
+version: 0.0.1
+main: banira4649\EffectParticles\Main
+api: 5.16.0
+src-namespace-prefix: banira4649\EffectParticles
+...
