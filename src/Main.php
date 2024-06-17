@@ -25,6 +25,7 @@ class Main extends PluginBase{
         $this->getScheduler()->scheduleRepeatingTask(new ClosureTask(
             function(){
                 foreach(Server::getInstance()->getOnlinePlayers() as $player){
+                    if($player->isSpectator()) continue;
                     foreach($player->getEffects()->all() as $effect){
                         $this->sendEffectParticle($player->getPosition(), $effect->getColor());
                     }
